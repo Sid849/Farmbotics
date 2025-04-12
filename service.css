@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right,rgb(43, 1, 45),rgb(123, 3, 144));
+}
+
+nav{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    display: flex;
+}
+
+nav li {
+    gap: 10px;
+    list-style:none;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+nav li a{
+    animation: border 5s infinite alternate ease-in-out;
+}
+
+@keyframes border {
+    25%{
+        border-bottom:1px solid white;
+    }
+    50%{
+        border-bottom: 1px solid rgb(141, 140, 140);
+    }
+    75%{
+        border-bottom: 1px solid rgb(107, 107, 107);
+    }
+    100%{
+        border-bottom: 1px solid rgb(26, 26, 26);
+    }
+}
+
+nav :hover{
+    border: 1px solid solid white;
+    background-color: navajowhite;
+    border-radius: 3px;
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.name p{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin: 30px;
+    animation: colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #FFFFFF;}
+    25% { color: #E0E0E0; } 
+    50% { color: #00FFFF; } 
+    75% { color: #39FF14; } 
+    100% { color:#FFD700; } 
+}
+
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    margin: 15px;
+    border-bottom:3px solid white ;
+}
+
+.service{
+    background-color: rgb(25, 23, 23);
+    margin: 20px;
+    display: flex;
+    gap: 22px;
+    border: 25px solid rgb(29, 28, 28);
+    border-radius: 10px;
+}
+
+.First,.Second,.Third,.Fourth{
+    border: 5px solid purple;
+    border-radius: 5px;
+    margin: 1px;
+    padding: 1px;
+    width: fit-content;
+    background-color: rgb(25, 23, 23);
+    animation: levitate 2s infinite alternate;
+}
+
+@keyframes levitate {
+    0%{
+        transform: translateY(0);
+        box-shadow: 1px solid white,2px solid white,0,0;
+    }
+    50%{
+        transform: translateY(-2px);
+        box-shadow: 1px solid white,2px solid white,0,0;
+    }
+    100%{
+        transform: translateY(2px);
+        box-shadow: 0;
+    }
+}
+
+.heading{
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    width: fit-content;
+}
+
+.First pre,.Second pre,.Third pre,.Fourth pre{
+    color: white;
+    font-size: 20px;
+}
+
+.logos{
+    gap: 10px;
+}
+
+.fa-discord,.fa-x-twitter,.fa-facebook,.fa-instagram{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.fa-discord:hover{
+    color: blue;
+}
+
+.fa-x-twitter:hover{
+    background-color: black;
+    border-radius: 35px;
+}
+
+.fa-instagram:hover{
+    background: linear-gradient(to right,blue,rgb(236, 54, 85),red,yellow);
+    border-radius: 5px;
+}
+
+.fa-facebook:hover{
+    color: rgb(48, 48, 228);
+}
+
+.line{
+    border-top: 1px solid white;
+    margin: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .name p {
+        font-size: 45px;
+    }
+
+    .service {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .First, .Second, .Third, .Fourth {
+        width: 45%;
+    }
+
+    .logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .name p {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .First, .Second, .Third, .Fourth {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .logos {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        z-index: 99;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    nav li {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .name p {
+        font-size: 23px;
+        text-align: center;
+        margin: 100px 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .First, .Second, .Third, .Fourth {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .First pre, .Second pre, .Third pre, .Fourth pre {
+        font-size: 14px;
+    }
+
+    .logos {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .fa-discord, .fa-x-twitter, .fa-facebook, .fa-instagram {
+        font-size: 20px;
+    }
+}
+}
+
+/* Larger Screens (e.g., Nest Hub Max) */
+@media (max-width: 1400px) {
+    .service {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .First, .Second, .Third, .Fourth {
+        width: 40%;
+    }
+
+    .name p {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+}

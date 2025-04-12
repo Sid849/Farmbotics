@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right,rgb(43, 1, 45),rgb(123, 3, 144));
+}
+
+nav{
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    display: flex;
+    backdrop-filter: blur(4px);
+}
+
+nav li {
+    gap: 10px;
+    list-style:none;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+nav :hover{
+    border: 1px solid solid white;
+    background-color: aquamarine;
+    border-radius: 3px;
+    color: black;
+    z-index: 99;
+    background-color: navajowhite;
+    padding: 10px,0;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav li a{
+    animation: border 5s infinite alternate ease-in-out;
+}
+
+@keyframes border {
+    25%{
+        border-bottom:1px solid white;
+    }
+    50%{
+        border-bottom: 1px solid rgb(141, 140, 140);
+    }
+    75%{
+        border-bottom: 1px solid rgb(107, 107, 107);
+    }
+    100%{
+        border-bottom: 1px solid rgb(26, 26, 26);
+    }
+}
+
+.name p{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin: 30px;
+    animation: colorChange 4s infinite alternate;
+}
+@keyframes colorChange {
+    0% { color: #FFFFFF;}
+    25% { color: #E0E0E0; } 
+    50% { color: #00FFFF; } 
+    75% { color: #39FF14; } 
+    100% { color:#FFD700; } 
+}
+
+.main{
+    background-color: rgb(25, 23, 23);
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    height: 480px;
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0%{
+        color: black;
+    }
+    25%{
+        color: crimson;
+    }
+    50%{
+        color: white;
+    }
+    75%{
+        color: cadetblue;
+    }
+    100%{
+        color: aqua;
+    }
+}
+
+.info{
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.main img{
+    height: 480px;
+    width: 390px;
+    border-radius: 6px,6px,0,0;
+    background-size: cover;
+}
+
+.CEO{
+    color: white;
+    font-family: sans-serif;
+}
+
+h2{
+    color: white;
+    text-transform: uppercase;
+}
+
+.jobs button{
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: black;
+    cursor: pointer;
+    text-shadow: none;
+    transition: 2s;
+    border: 1px solid black;
+}
+
+.jobs button:hover{
+    transform: translateY(-2px);
+    text-shadow: 0,5px black,2px black,2px black;
+}
+
+.jobs p{
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.name{
+    font-weight: bold;
+    color: white;
+}
+
+/* ------------------- MEDIA QUERIES FOR RESPONSIVENESS ------------------- */
+
+/* Mobile Devices (≤600px) */
+@media only screen and (max-width: 600px) {
+    .name p {
+        font-size: 30px;
+        text-align: center;
+        margin:90px;
+    }
+
+    .main {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .main img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .info {
+        font-size: 16px;
+        margin: 10px;
+        text-align: left;
+    }
+
+    .jobs button {
+        width: 90%;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        position: fixed;
+        gap: 10px;
+    }
+
+    nav li {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .jobs p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* Tablet Devices (601px–768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .name p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .main img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .info {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .jobs button {
+        width: 70%;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+    }
+
+    nav li {
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .jobs p {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+/* Desktop (≥769px) */
+@media only screen and (min-width: 769px) {
+    .main {
+        flex-direction: row;
+    }
+
+    .main img {
+        width: 390px;
+        height: 480px;
+    }
+
+    .jobs button {
+        width: 300px;
+        padding: 10px;
+    }
+}
